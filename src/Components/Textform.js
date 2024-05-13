@@ -82,26 +82,27 @@ export default function Textform(props) {
           ></textarea>
         </div>
       </div>
-      <button className="btn btn-primary mx-3" onClick={handleUpClick}>
+      <button disabled={text.length===0} className="btn btn-primary mx-3" onClick={handleUpClick}>
         Convert to Uppercase
       </button>
-      <button className="btn btn-secondary mx-3" onClick={handleLoClick}>
+      <button disabled={text.length===0} className="btn btn-secondary mx-3" onClick={handleLoClick}>
         Convert to Lowercase
       </button>
-      <button onClick={handlespeak} className="btn btn-warning mx-3 ">
+      <button disabled={text.length===0} onClick={handlespeak} className="btn btn-warning mx-3 ">
         Speak🔊
       </button>
       <button
+      disabled={text.length===0} 
         className="btn btn-info
        mx-3"
         onClick={handleinverseclick}
       >
         Inverse Click
       </button>
-      <button className="btn btn-danger mx-3" onClick={handleCopy}>
+      <button disabled={text.length===0} className="btn btn-danger mx-3" onClick={handleCopy}>
         Copy Text
       </button>
-      <button className="btn btn-primary mx-3" onClick={handleExtraSpaces}>
+      <button disabled={text.length===0} className="btn btn-primary mx-3" onClick={handleExtraSpaces}>
         Remove Extra Spaces
       </button>
       <div className="container my-3" style= {{color: props.mode === "dark" ? "white" : "#042743"}}>
